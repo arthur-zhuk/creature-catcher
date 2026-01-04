@@ -1,67 +1,87 @@
-![image](https://user-images.githubusercontent.com/5507707/113234800-cf700580-9256-11eb-95e3-29923e5c0d86.png)
+# Creature Catcher
 
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![AssemblyScript](https://img.shields.io/badge/AssemblyScript-007AAC?style=for-the-badge&logo=assemblyscript&logoColor=white)
+![NEAR](https://img.shields.io/badge/NEAR-00D9FF?style=for-the-badge&logo=near&logoColor=white)
 
-# Sample
+Early MVP of a simple smart contract deployed on the NEAR blockchain. Catch creatures in this Web3 game built with AssemblyScript for the NEAR Protocol.
 
-This repository includes a complete project structure for AssemblyScript contracts targeting the NEAR platform.
+## Features
 
-The example here is very basic.  It's a simple contract demonstrating the following concepts:
-- a single contract
-- the difference between `view` vs. `change` methods
-- basic contract storage
+- **NEAR Protocol**: Deployed on NEAR blockchain
+- **Smart Contracts**: Written in AssemblyScript
+- **View Methods**: Read-only contract methods
+- **Change Methods**: State-modifying contract methods
+- **Contract Storage**: Basic on-chain storage
 
-The goal of this repository is to make it as easy as possible to get started writing unit and simulation tests for AssemblyScript contracts built to work with NEAR Protocol.
+## Tech Stack
+
+- **Blockchain**: NEAR Protocol
+- **Smart Contracts**: AssemblyScript
+- **Language**: TypeScript
+
+## Installation
+
+```bash
+git clone https://github.com/arthur-zhuk/creature-catcher.git
+cd creature-catcher
+yarn install
+```
 
 ## Usage
 
-### Getting started
+### Build Contracts
 
-1. clone this repo to a local folder
-2. run `yarn`
-3. run `yarn test`
-
-### Top-level `yarn` commands
-
-- run `yarn test` to run all tests
-  - (!) be sure to run `yarn build:release` at least once before:
-    - run `yarn test:unit` to run only unit tests
-    - run `yarn test:simulate` to run only simulation tests
-- run `yarn build` to quickly verify build status
-- run `yarn clean` to clean up build folder
-
-### Other documentation
-
-- Sample contract and test documentation
-  - see `/src/sample/README` for contract interface
-  - see `/src/sample/__tests__/README` for Sample unit testing details
-
-- Sample contract simulation tests
-  - see `/simulation/README` for simulation testing
-
-
-## The file system
-
-Please note that boilerplate project configuration files have been ommitted from the following lists for simplicity.
-
-### Contracts and Unit Tests
-
-```txt
-src
-├── sample                        <-- sample contract
-│   ├── README.md
-│   ├── __tests__
-│   │   ├── README.md
-│   │   └── index.unit.spec.ts
-│   └── assembly
-│       └── index.ts
-└── utils.ts                      <-- shared contract code
+```bash
+yarn build:release
 ```
 
-### Helper Scripts
+### Run Tests
 
-```txt
-scripts
-├── 1.init.sh
-├── 2.run.sh
-└── README.md                     <-- instructions
+```bash
+yarn test
 ```
+
+### Test Commands
+
+```bash
+yarn test:unit      # Run unit tests only
+yarn test:simulate  # Run simulation tests only
+```
+
+## Getting Started
+
+1. Clone this repository
+2. Run `yarn install`
+3. Run `yarn build:release` (required before testing)
+4. Run `yarn test` to run all tests
+
+## Project Structure
+
+```
+src/
+├── sample/              # Sample contract
+│   ├── __tests__/      # Unit tests
+│   └── ...
+└── ...
+```
+
+## Development
+
+```bash
+yarn build          # Verify build status
+yarn clean          # Clean build folder
+yarn test           # Run all tests
+yarn test:unit      # Unit tests only
+yarn test:simulate  # Simulation tests only
+```
+
+## Documentation
+
+- Contract interface: See `/src/sample/README`
+- Unit testing: See `/src/sample/__tests__/README`
+- Simulation tests: See `/simulation/README`
+
+## License
+
+MIT
